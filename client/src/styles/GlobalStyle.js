@@ -15,12 +15,15 @@ export const GlobalStyle = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: inherit;
   }
-  body {
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     font-family: 'Helvetica';
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
     line-height: 1.5;
+  }
+  ol, ul {
+    list-style: none;
   }
   a {
     text-decoration: none;

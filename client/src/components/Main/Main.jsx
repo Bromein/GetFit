@@ -1,6 +1,8 @@
 import React from "react";
 
 import GoalForm from "../GoalForm/GoalForm";
+import DisplayResults from "../DisplayResults/DisplayResults";
+import Sidebar from "../Sidebar/Sidebar";
 
 import { CenteredMain } from "./Main.styles";
 
@@ -18,11 +20,13 @@ class Main extends React.Component {
 
     return (
       <CenteredMain {...this.props}>
-        {tdee ? (
-          <div>{this.state.tdee}</div>
+        <Sidebar />
+        {/* {tdee ? (
+          <DisplayResults tdee={this.state.tdee} />
         ) : (
           <GoalForm updateTdee={this.handleTdeeChange} />
-        )}
+        )} */}
+        <DisplayResults />
       </CenteredMain>
     );
   }

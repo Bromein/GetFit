@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
 
 // import Navbar from "./components/Navbar/Navbar";
 import Main from "./components/Main/Main";
@@ -30,7 +29,7 @@ class App extends React.Component {
       <ThemeProvider theme={this.state.darkMode ? dark : light}>
         <Page>
           <GlobalStyle />
-          <Header />
+          {/* <Header /> */}
           <Main />
           <Footer toggleDarkMode={this.toggleDarkMode} />
         </Page>

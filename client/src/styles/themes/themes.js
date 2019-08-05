@@ -2,8 +2,9 @@ export const light = {
   background: "#f7ad05",
   contentBackground: "#EDEDED",
   textColor: "#393939",
-  accent: "#f10189",
+  accent: "#6f8773",
   bs: "0 12px 24px 0 rgba(0, 0, 0, 0.5)",
+  lightMode: true,
 };
 
 export const dark = {
@@ -12,6 +13,7 @@ export const dark = {
   textColor: "#FFF",
   accent: "#f7ad05",
   bs: "0 12px 24px 0 rgba(0, 0, 0, 0.5)",
+  lightMode: false,
 };
 
 //EDEDED offwhite

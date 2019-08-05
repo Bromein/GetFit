@@ -1,9 +1,11 @@
 import React from "react";
 
+import { Result } from "./DisplayResults.styles";
+
 const DisplayResults = props => (
-  <div>
-    <h1>Results</h1>
-    {props.tdee}
-  </div>
+  <Result>
+    <div className="results">Your TDEE is {props.tdee}</div>
+    <span>2800</span>
+  </Result>
 );
 export default DisplayResults;

@@ -3,11 +3,17 @@ import styled from "styled-components";
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 75%;
+  max-width: 50rem;
   margin: 0 auto;
   padding: 5rem;
   justify-content: center;
   align-items: center;
+  font-family: "comfortaa";
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 
   & > input,
   select {
@@ -36,21 +42,40 @@ export const StyledForm = styled.form`
     }
   }
 
+  .error {
+    border: 1px solid red;
+    color: red;
+  }
+
+  .disabled {
+    cursor: no-drop;
+    background-color: rgba(237, 237, 237, 0.5);
+    color: rgba(237, 237, 237, 0.8);
+  }
+
   label {
     color: ${props => props.theme.textColor};
   }
 
   button {
+    margin: 2rem;
     border-radius: 4px;
     height: 4rem;
     font-size: 2rem;
-    color: ${props => props.theme.textColor};
+    color: #ededed;
     background: ${props => props.theme.accent};
-    width: 90%;
-    transition: all 0.2s ease-in;
+    width: 60%;
+    transition: all 0.1s ease-in;
     border: none;
     &:hover {
-      width: 100%;
+      width: 70%;
+      height: 4.25rem;
+      font-size: 2.25rem;
     }
   }
+`;
+
+export const ErrorText = styled.span`
+  color: red;
+  font-size: 1rem;
 `;
