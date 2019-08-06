@@ -20,13 +20,13 @@ class Main extends React.Component {
 
     return (
       <CenteredMain {...this.props}>
-        <Sidebar />
-        {/* {tdee ? (
+        {/* <Sidebar /> */}
+        {tdee ? (
           <DisplayResults tdee={this.state.tdee} />
         ) : (
           <GoalForm updateTdee={this.handleTdeeChange} />
-        )} */}
-        <DisplayResults />
+        )}
+        {/* <DisplayResults /> */}
       </CenteredMain>
     );
   }

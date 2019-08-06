@@ -56,7 +56,6 @@ class GoalForm extends React.Component {
         gender: "",
         weight: "",
         activityModifier: "",
-        tdee: null,
       });
     } else {
       console.error("form invalid");
@@ -111,7 +110,7 @@ class GoalForm extends React.Component {
   };
 
   render() {
-    const { errors, allowSubmit } = this.state;
+    const { errors } = this.state;
 
     return (
       <StyledForm onSubmit={this.calculateBmr}>
@@ -143,7 +142,7 @@ class GoalForm extends React.Component {
         <select
           name="gender"
           onChange={this.handleChange}
-          value={this.state.gender}
+          // value={this.state.gender}
           className={errors.gender.length > 0 ? "error" : null}
         >
           <option value="">--Gender--</option>
@@ -152,7 +151,7 @@ class GoalForm extends React.Component {
         </select>
         {errors.gender.length > 0 && <ErrorText>{errors.gender}</ErrorText>}
         <select
-          className={errors.gender.length > 0 ? "error" : null}
+          className={errors.activityModifier.length > 0 ? "error" : null}
           name="activityModifier"
           onChange={this.handleChange}
         >
